@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'ar-view',
+    loadChildren: () => import('./ar-view/ar-view.module').then(m => m.ArViewPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

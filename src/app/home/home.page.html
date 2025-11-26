@@ -1,20 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header translucent="true">
+  <ion-toolbar color="primary">
+    <ion-title>AR Taller</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content fullscreen="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+    <ion-toolbar color="primary">
+      <ion-title size="large">AR Taller</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <section class="hero">
+    <h1>Explora Realidad Aumentada</h1>
+    <p>Selecciona un objetivo para renderizarlo en la cámara usando un único visor AR.</p>
+  </section>
+
+  <ion-list inset="true">
+    <ion-item *ngFor="let target of targets" lines="none">
+      <ion-avatar slot="start">
+        <ion-icon name="cube" *ngIf="target.type === 'marker'"></ion-icon>
+        <ion-icon name="images" *ngIf="target.type === 'nft'"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ target.name }}</h2>
+        <p>{{ target.description }}</p>
+      </ion-label>
+      <ion-button fill="solid" slot="end" (click)="openTarget(target)">
+        Abrir
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <section class="help">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¿Cómo funciona?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ol>
+          <li>Imprime o muestra el marcador correspondiente (Hiro, Kanji o NFT).</li>
+          <li>Presiona "Abrir" para lanzar el visor AR.</li>
+          <li>Apunta la cámara al marcador y observa el contenido.</li>
+        </ol>
+      </ion-card-content>
+    </ion-card>
+  </section>
 </ion-content>
