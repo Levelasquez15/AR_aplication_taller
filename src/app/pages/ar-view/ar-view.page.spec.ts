@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
+import { ComponentsModule } from '../../shared/components/components.module';
+import { ArTargetService } from '../../services/ar-target.service';
 import { ArViewPage } from './ar-view.page';
-import { ArTargetService } from '../services/ar-target.service';
 
 describe('ArViewPage', () => {
   let component: ArViewPage;
@@ -10,7 +11,7 @@ describe('ArViewPage', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ArViewPage],
-      imports: [IonicModule.forRoot()],
+      imports: [IonicModule.forRoot(), ComponentsModule],
       providers: [ArTargetService]
     }).compileComponents();
 

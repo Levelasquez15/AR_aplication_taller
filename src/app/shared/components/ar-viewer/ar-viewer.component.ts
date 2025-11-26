@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
-import { ArEntityConfig, ArTarget } from '../../models/ar-target';
+import { ArEntityConfig, ArTarget } from '../../../models/ar-target';
 
 @Component({
   selector: 'app-ar-viewer',

@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
-import { ArTarget } from '../models/ar-target';
-import { ArTargetService } from '../services/ar-target.service';
+import { ArTarget } from '../../models/ar-target';
+import { ArTargetService } from '../../services/ar-target.service';
 
 @Component({
   selector: 'app-ar-view',

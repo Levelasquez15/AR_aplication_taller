@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { ArTarget } from '../models/ar-target';
-import { ArTargetService } from '../services/ar-target.service';
+import { ArTarget } from '../../models/ar-target';
+import { ArTargetService } from '../../services/ar-target.service';
 
 @Component({
   selector: 'app-home',
