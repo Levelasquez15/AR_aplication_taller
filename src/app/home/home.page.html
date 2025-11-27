@@ -1,12 +1,82 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>AR Experience</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content class="ion-padding">
 
-  <h1>Realidad Aumentada</h1>
-  <p>
-    Apunta la cámara a una imagen objetivo para ver la experiencia AR.
-  </p>
+  <div class="home-container">
+    
+    <div class="hero-section">
+      <ion-icon name="cube-outline" class="hero-icon"></ion-icon>
+      <h1>Realidad Aumentada 3D</h1>
+      <p class="subtitle">
+        Experimenta objetos 3D interactivos en tu entorno real
+      </p>
+    </div>
 
-  <ion-button expand="block" routerLink="/ar">
-    Iniciar Realidad Aumentada
-  </ion-button>
+    <div class="features">
+      <div class="feature-card">
+        <ion-icon name="radio-outline"></ion-icon>
+        <h3>Radio Retro</h3>
+        <p>Música y ondas de sonido</p>
+      </div>
+      <div class="feature-card">
+        <ion-icon name="flash-outline"></ion-icon>
+        <h3>Pistola</h3>
+        <p>Con efectos de disparo</p>
+      </div>
+      <div class="feature-card">
+        <ion-icon name="car-sport-outline"></ion-icon>
+        <h3>Carro Deportivo</h3>
+        <p>Con humo y animación</p>
+      </div>
+    </div>
+
+    <div class="instructions-section">
+      <h2>¿Cómo funciona?</h2>
+      
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-text">
+          <h3>Imprime los marcadores</h3>
+          <p>Necesitas los marcadores: Pattern, HIRO y KANJI (10x10cm mínimo)</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-text">
+          <h3>Inicia la cámara AR</h3>
+          <p>Toca el botón y permite el acceso a la cámara</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-text">
+          <h3>Apunta al marcador</h3>
+          <p>Mantén 30-50cm de distancia con buena iluminación</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-text">
+          <h3>¡Disfruta la experiencia!</h3>
+          <p>Verás el objeto 3D sobre el marcador</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <ion-button expand="block" routerLink="/ar" class="primary-btn">
+        <ion-icon name="camera" slot="start"></ion-icon>
+        Iniciar Realidad Aumentada
+      </ion-button>
+    </div>
+
+  </div>
 
 </ion-content>

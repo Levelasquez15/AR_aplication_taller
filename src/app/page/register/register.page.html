@@ -1,71 +1,76 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/login"></ion-back-button>
+      <ion-back-button defaultHref="/login" text="" icon="arrow-back"></ion-back-button>
     </ion-buttons>
     <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card class="register-card">
-    <ion-card-header>
-      <ion-card-title>Crear Cuenta</ion-card-title>
-      <ion-card-subtitle>Completa los datos para registrarse</ion-card-subtitle>
-    </ion-card-header>
+<ion-content>
+  <div class="register-container">
+    
+    <div class="register-header">
+      <ion-icon name="person-add-outline" class="logo-icon"></ion-icon>
+      <h1>Crear Cuenta</h1>
+      <p>Completa los datos para registrarte</p>
+    </div>
 
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Nombre</ion-label>
+    <div class="register-form">
+      <div class="input-group">
+        <ion-label>Nombre</ion-label>
         <ion-input 
           type="text" 
           [(ngModel)]="name"
-          placeholder="Tu nombre">
+          placeholder="Tu nombre"
+          fill="outline">
         </ion-input>
-      </ion-item>
+      </div>
 
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
+      <div class="input-group">
+        <ion-label>Email</ion-label>
         <ion-input 
           type="email" 
           [(ngModel)]="email"
-          placeholder="tu@email.com">
+          placeholder="tu@email.com"
+          fill="outline">
         </ion-input>
-      </ion-item>
+      </div>
 
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
+      <div class="input-group">
+        <ion-label>Contraseña</ion-label>
         <ion-input 
           type="password" 
           [(ngModel)]="password"
-          placeholder="Contraseña">
+          placeholder="Contraseña"
+          fill="outline">
         </ion-input>
-      </ion-item>
+      </div>
 
-      <ion-item>
-        <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <div class="input-group">
+        <ion-label>Confirmar Contraseña</ion-label>
         <ion-input 
           type="password" 
           [(ngModel)]="confirmPassword"
-          placeholder="Confirma tu contraseña">
+          placeholder="Confirma tu contraseña"
+          fill="outline">
         </ion-input>
-      </ion-item>
+      </div>
 
       <ion-button 
         expand="block" 
-        color="primary" 
         (click)="register()"
         class="register-button">
+        <ion-icon name="checkmark-outline" slot="start"></ion-icon>
         Registrarse
       </ion-button>
 
-      <ion-text color="medium" class="login-text">
+      <div class="login-link">
         <p>¿Ya tienes cuenta? 
-          <ion-text color="primary" (click)="goToLogin()" style="cursor: pointer;">
-            Inicia sesión aquí
-          </ion-text>
+          <span (click)="goToLogin()" class="link">Inicia sesión aquí</span>
         </p>
-      </ion-text>
-    </ion-card-content>
-  </ion-card>
+      </div>
+    </div>
+
+  </div>
 </ion-content>

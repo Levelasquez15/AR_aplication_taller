@@ -1,50 +1,53 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>AR Experience</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card class="login-card">
-    <ion-card-header>
-      <ion-card-title>Bienvenido</ion-card-title>
-      <ion-card-subtitle>Inicia sesión en tu cuenta</ion-card-subtitle>
-    </ion-card-header>
+<ion-content>
+  <div class="login-container">
+    
+    <div class="login-header">
+      <ion-icon name="cube-outline" class="logo-icon"></ion-icon>
+      <h1>Bienvenido</h1>
+      <p>Inicia sesión para acceder a la Realidad Aumentada</p>
+    </div>
 
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
+    <div class="login-form">
+      <div class="input-group">
+        <ion-label>Email</ion-label>
         <ion-input 
           type="email" 
           [(ngModel)]="email"
-          placeholder="tu@email.com">
+          placeholder="tu@email.com"
+          fill="outline">
         </ion-input>
-      </ion-item>
+      </div>
 
-      <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
+      <div class="input-group">
+        <ion-label>Contraseña</ion-label>
         <ion-input 
           type="password" 
           [(ngModel)]="password"
-          placeholder="Contraseña">
+          placeholder="Contraseña"
+          fill="outline">
         </ion-input>
-      </ion-item>
+      </div>
 
       <ion-button 
         expand="block" 
-        color="primary" 
         (click)="login()"
         class="login-button">
+        <ion-icon name="log-in-outline" slot="start"></ion-icon>
         Iniciar Sesión
       </ion-button>
 
-      <ion-text color="medium" class="signup-text">
+      <div class="signup-link">
         <p>¿No tienes cuenta? 
-          <ion-text color="primary" (click)="goToRegister()" style="cursor: pointer;">
-            Regístrate aquí
-          </ion-text>
+          <span (click)="goToRegister()" class="link">Regístrate aquí</span>
         </p>
-      </ion-text>
-    </ion-card-content>
-  </ion-card>
+      </div>
+    </div>
+
+  </div>
 </ion-content>

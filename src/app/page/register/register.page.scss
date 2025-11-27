@@ -1,20 +1,116 @@
-.register-card {
-  margin-top: 40px;
-  border-radius: 12px;
+ion-toolbar {
+  --background: #000;
+  --color: #fff;
 }
 
-.register-button {
-  margin-top: 20px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 600;
+ion-content {
+  --background: #000;
+  --color: #fff;
 }
 
-.login-text {
+ion-back-button {
+  --color: #fff;
+}
+
+.register-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.register-header {
   text-align: center;
-  margin-top: 20px;
+  margin-bottom: 2rem;
+  
+  .logo-icon {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  p {
+    font-size: 15px;
+    color: #888;
+    margin: 0;
+  }
 }
 
-ion-item {
-  margin-bottom: 15px;
+.register-form {
+  
+  .input-group {
+    margin-bottom: 1.2rem;
+    
+    ion-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    ion-input {
+      --background: #1a1a1a;
+      --color: #fff;
+      --placeholder-color: #666;
+      --padding-start: 1rem;
+      --padding-end: 1rem;
+      --border-color: #333;
+      --border-width: 1px;
+      --border-style: solid;
+      --border-radius: 8px;
+      font-size: 15px;
+      height: 48px;
+      
+      &:focus-within {
+        --border-color: #fff;
+      }
+    }
+  }
+  
+  .register-button {
+    --background: #fff;
+    --color: #000;
+    --border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    height: 56px;
+    margin-top: 1rem;
+    
+    &:hover {
+      --background: #e0e0e0;
+    }
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    
+    p {
+      font-size: 14px;
+      color: #888;
+      margin: 0;
+      
+      .link {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: underline;
+        cursor: pointer;
+        
+        &:hover {
+          color: #e0e0e0;
+        }
+      }
+    }
+  }
 }
